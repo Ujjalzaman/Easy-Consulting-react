@@ -1,0 +1,213 @@
+#dashboard {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: stretch;
+    perspective: 1500px;
+    background: #f4f7fc;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  #sidebar {
+    min-width: 300px;
+    max-width: 300px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background: white;
+    color: #878787;
+    transition: all 0.6s cubic-bezier( 0.55, 0.055, 0.675, 0.19 ) ;
+    padding-bottom: 0.5rem;
+  }
+  #sidebar.active {
+    margin-left: -300px;
+    transform: rotateY(100deg);
+  }
+  
+  .sidebarContent {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .backBtnBox {
+    position: absolute;
+    bottom: 0;
+    padding: 0.2rem;
+    width: 100%;
+  }
+  
+  .backBtnBox .backBtn {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    background: #7254F6;
+    border: none;
+    font-size: 1rem;
+    transition: 0.3s;
+    padding: 0.4rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 0.3rem;
+  }
+  
+  .backBtnBox .backBtn:hover{
+    background: #4C25F5;
+  }
+  
+  .backBtnBox a:hover {
+    text-decoration: none;
+  }
+  
+  #pageContent {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    padding: 1rem;
+  }
+  
+  .dashBoardHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 2rem 0.6rem 1.3rem;
+    margin-bottom: 1rem;
+    background: #FFFFFF;
+    align-items: center;
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    transition: 0.4s;
+    transform: button;
+  }
+  
+  .dashBoardHeader h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .sideToggleBtn {
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+  
+  /* Menu Hamburger Icon Animation */
+  
+  #nav-icon {
+    width: 40px;
+    height: 34px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .7s ease-in-out;
+    -moz-transition: .7s ease-in-out;
+    -o-transition: .7s ease-in-out;
+    transition: .7s ease-in-out;
+    cursor: pointer;
+    border-radius: 0.133rem;
+    margin-right: 0.5rem;
+    background: #eff2f7;
+  }
+  
+  #nav-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background: #696969;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+  
+  #nav-icon span:nth-child(even) {
+    left: 35%;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  #nav-icon span:nth-child(odd) {
+    left: 0.4rem;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  #nav-icon span:nth-child(1), #nav-icon span:nth-child(2) {
+    top: 7px;
+  }
+  
+  #nav-icon span:nth-child(3), #nav-icon span:nth-child(4) {
+    top: 15px;
+  }
+  
+  #nav-icon span:nth-child(5), #nav-icon span:nth-child(6) {
+    top: 23px;
+  }
+  
+  #nav-icon.open span:nth-child(1),#nav-icon.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  #nav-icon.open span:nth-child(2),#nav-icon.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  #nav-icon.open span:nth-child(1) {
+    left: 10px;
+    top: 14px;
+  }
+  
+  #nav-icon.open span:nth-child(2) {
+    left: calc(50% - 10px);
+    top: 14px;
+  }
+  
+  #nav-icon.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+  }
+  
+  #nav-icon.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+  }
+  
+  #nav-icon.open span:nth-child(5) {
+    left: 10px;
+    top: 15px;
+  }
+  
+  #nav-icon.open span:nth-child(6) {
+    left: calc(50% - 10px);
+    top: 15px;
+  }
+  
+  .adminBtn {
+    margin-top: 1.8rem;
+    margin-left: -1rem;
+  }
+  
+  .makeAdmin {
+      background: #FFFFFF;
+      border-radius: 1rem;
+      padding: 3rem 2rem 8rem;
+      margin-top: 2rem;
+      box-shadow: 0 2px 5px 1px rgb(64 60 67 / 4%);
+  }
+  
