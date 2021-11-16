@@ -1,0 +1,44 @@
+#contact {
+    padding: 7rem 0 6rem;
+    overflow: hidden;
+}
+.sectionTitle {
+    margin: 0.5rem 0 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.6rem;
+}
+.sectionTitle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100px;
+    border-radius: 70px;
+    height: 4px;
+    background: #7355F7;
+}
+
+.contactForm {
+    padding: 1rem;
+}
+.contactForm input,
+.contactForm textarea {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem 0.8rem;
+    border-radius: 0.3rem;
+    border: 1px solid #bebebe;
+    color: #000;
+}
+.contactForm input:focus,
+.contactForm textarea:focus {
+    outline: none !important;
+    border: 1px solid #7054F2;
+    background-color: rgb(243, 240, 255);
+}
+.contactForm textarea {
+    height: 120px;
+}

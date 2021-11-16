@@ -1,5 +1,6 @@
 import React from 'react';
 import About from '../About/About';
+import Contact from '../Contact/Contact';
 import HappyClient from '../HappyClient/HappyClient';
 import Header from '../Header/Header';
 import Pricing from '../Pricing/Pricing';
@@ -15,10 +16,9 @@ const Home = () => {
             <HappyClient/>
             <Pricing/>
             <Reviews/>
-            {/* // <Reviews/>
-            // <Contact/>
-            // <Footer/>
-            // <ScrollTop/>  */} 
+            <Contact/>
+            {/* // <Footer/>
+            // <ScrollTop/>   */}
         </main>
     );
 };
