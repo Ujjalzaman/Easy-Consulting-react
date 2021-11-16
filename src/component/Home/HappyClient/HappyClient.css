@@ -1,0 +1,51 @@
+.ourValue {
+    background: #7355F7;
+    padding: 2rem;
+}
+.ourValueDetails {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0px 60px 0 rgb(0 0 0 / 10%);
+    padding: 1.3rem 1rem 1rem;
+    transition: all 1s;
+    text-align: center;
+}
+.valueIcon {
+    padding: 0.4rem 0.8rem;
+    font-size: 3rem;
+    color: #fff;
+    border-radius: 0.25rem
+} 
+.valueIcon1 {
+    background: #029e76;
+    box-shadow: 0 2px 15px rgb(2 158 118 / 50%);
+}
+.valueIcon2 {
+    box-shadow: 0 2px 15px rgb(255 168 8 / 50%);
+    background-color: #ffa808;
+}
+.valueIcon3 {
+    box-shadow: 0 2px 15px rgb(85 67 209 / 50%);
+    background-color: #5543d1;
+}
+.valueIcon4 {
+    box-shadow: 0 2px 15px rgb(255 88 110 / 50%);
+    background-color: #ff586e;
+}
+.ourValueNumber {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #7355F7;
+}
+.ourValueTitle {
+    color: #777777;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 981px) {
+    .ourValueDetails{
+        margin-top: 1rem;
+    }
+}
