@@ -1,0 +1,24 @@
+.bookingList {
+    background: white;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 4%);
+    padding: 1.5rem;
+    margin: 0.9rem 0;
+    border-radius: 0.5rem;
+}
+.bookingList img{
+    height: 70px;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    background: #D5C4FF;
+    margin-bottom: 0.5rem;
+}
+.bookingList h6{
+    margin: 0.5rem 0;
+    color: #263179;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.serviceState {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+}

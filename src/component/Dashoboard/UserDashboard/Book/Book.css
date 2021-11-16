@@ -1,0 +1,45 @@
+.bookForm {
+    background: #fff;
+    padding: 2rem 3rem;
+    margin: 2.5rem 1rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.form-select:focus,
+.form-control:focus  {
+    border-color: #8468ff!important;
+    box-shadow: 0 0 0 0.2rem rgb(4 0 255 / 26%)!important;
+}
+
+.priceInput {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.activeService {
+    background: #66b0ffbe;
+    color: #fff;
+}
+
+.toastIcon {
+    height: 1.2rem;
+}
+
+.bookToast {
+    position: absolute;
+    right: 0;
+    top: 1.5rem;
+    z-index: 111;
+    background: #fff;
+}

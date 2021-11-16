@@ -1,0 +1,18 @@
+.userReviewBox {
+    background: #f1ecff;
+    padding: 2.5rem 5rem;
+    border-radius: 0.6rem;
+    text-align: center;
+    min-height: 100vh;
+}
+.userReviewBox button {
+    margin: 0 0.5rem;
+}
+.reviewForm {
+    background: white;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 4%);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin: 2.5rem 0;
+}

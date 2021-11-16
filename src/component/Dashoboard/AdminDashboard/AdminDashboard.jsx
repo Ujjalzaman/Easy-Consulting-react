@@ -2,6 +2,12 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Profile from '../Profile/Profile';
 import { Outlet } from 'react-router';
+import OrderList from '../OrderList/OrderList';
+import AddService from '../AddService/AddService';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import ManageServices from '../ManageServices/ManageServices';
+
+
 // import Profile from '../../Profile/Profile';
 // import AddService from '../AddService/AddServices';
 // import MakeAdmin from '../MakeAdmin/MakeAdmin';
@@ -10,18 +16,13 @@ import { Outlet } from 'react-router';
 
 const AdminDashboard = () => {
     return (
-        <div>
-            <Outlet/>
-            {/* <Outlet/> */}
-            {/* <Route exact path="/dashboard/profile"><Profile/></Route> */}
-
-             {/* <Routes> */}
-                {/* <Route exact path="/dashboard/orderList"><OrderList/></Route> */}
-                {/* <Route path="/dashboard/addService"><AddService/></Route> */}
-                {/* <Route path="/dashboard/makeAdmin"><MakeAdmin/></Route> */}
-                {/* <Route path="/dashboard/manageServices"><ManageServices/></Route> */}
-             {/* </Routes> */}
-        </div>
+        <Routes>
+            <Route path="profile" element={<Profile />} />
+            <Route path="orderList" element={<OrderList />} />
+            <Route path="addService" element={<AddService />} />
+            <Route path="makeAdmin" element={<MakeAdmin />} />
+            <Route path="manageServices" element={<ManageServices />} />
+        </Routes>
     );
 };
 
