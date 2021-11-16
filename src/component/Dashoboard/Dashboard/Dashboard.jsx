@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './Dashboard.css';
 import Sidebar from '../Sidebar/Sidebar';
 import {Link} from 'react-router-dom';
+import AdminDashboard from '../AdminDashboard/AdminDashboard';
 
 const Dashboard = () => {
     const [sideToggle, setSideToggle] = useState(false)
@@ -38,6 +39,7 @@ const Dashboard = () => {
                     </div>
                     {/* <PopOver/> */}
                 </div>
+                <AdminDashboard/>
                 {/* {
                     admin ? <AdminDashboard/> : <UserDashboard/>
                 } */}
