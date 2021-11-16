@@ -1,0 +1,30 @@
+.addServiceForm{
+    background: white;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 4%);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 2.5rem 0;
+}
+  
+.uploadBtn {
+    color: #6544f8;
+    border: 1px solid #5c38ff;
+    background-color: rgba(147, 123, 255, 0.227);
+    padding: 8px 20px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: 0;
+    width: 250px;
+    transition: 0.4s;
+}
+
+.uploadBtn:hover {
+    color: #6544f8;
+    border: 1px solid #5c38ff;
+    background-color: rgba(147, 123, 255, 0.384);
+}
+
+.form-label {
+    margin-bottom: .6rem!important;
+}

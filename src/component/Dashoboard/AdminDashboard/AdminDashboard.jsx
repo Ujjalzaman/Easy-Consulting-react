@@ -12,6 +12,7 @@ const AdminDashboard = () => {
     return (
         <div>
             <Outlet/>
+            {/* <Outlet/> */}
             {/* <Route exact path="/dashboard/profile"><Profile/></Route> */}
 
              {/* <Routes> */}

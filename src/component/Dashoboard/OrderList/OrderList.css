@@ -1,0 +1,28 @@
+.orderList{
+    background: white;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 4%);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+.tableTitle {
+    background: #efefef;
+    border-radius: 0.4rem;
+    padding: 0.2rem 1rem;
+}
+.tableTitle p {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.table-hover tbody tr:hover {
+    color: #212529;
+    background-color: #fcfcfc!important;
+}
+
+.table td, .table th {
+    border-top: 0!important;
+}
+
+
