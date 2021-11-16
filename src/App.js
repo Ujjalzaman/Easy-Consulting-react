@@ -4,14 +4,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-// import Header from '../src/component/Home/Header';
+import About from './component/Home/About/About';
 const App = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/home" element={<Home />} /> */}
-        {/* <Route path="/about" element={<Home />} /> */}
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   )
