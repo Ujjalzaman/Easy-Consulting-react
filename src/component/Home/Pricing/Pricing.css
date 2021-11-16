@@ -1,0 +1,176 @@
+.pricing{
+    padding: 7rem 0 6rem;
+    font-family: 'Poppins', sans-serif;
+}
+.pricingNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.pricingNav img {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pricingNav .nav-link {
+    position: relative;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.priceLink1 > .nav-link {
+    border: 7px solid #ffccd3;
+}
+.priceLink2 > .nav-link {
+    border: 7px solid #a2ffd2;
+}
+.priceLink3 > .nav-link {
+    border: 7px solid #fdd2ff;
+}
+.priceLink4 > .nav-link {
+    border: 7px solid #CBEDFF;
+}
+.priceLink5 > .nav-link {
+    border: 7px solid #dfdaff;
+}
+.priceLink6 > .nav-link {
+    border: 7px solid #ffeb94;
+}
+
+.priceLink1 > a:hover, 
+.priceLink1 > .nav-link.active {
+    background: #FF4F66;
+}
+.priceLink2 > a:hover, 
+.priceLink2 > .nav-link.active {
+    background: #4ED797;
+
+}
+.priceLink3 > a:hover, 
+.priceLink3 > .nav-link.active {
+    background: #F78CFF;
+}
+.priceLink4 > a:hover, 
+.priceLink4 > .nav-link.active {
+    background: #76CDFF;
+}
+.priceLink5 > a:hover, 
+.priceLink5 > .nav-link.active {
+    background: #755BFF;
+}
+.priceLink6 > a:hover, 
+.priceLink6 > .nav-link.active {
+    background: #ffd30f;
+}
+
+
+/* Pricing Card Component Design */
+
+.pricingCard {
+    box-shadow: 1px 0 50px rgb(0 0 0 / 9%);
+    border-radius: 0.26rem !important;
+    transition: all 1s;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    margin-top: 2.5rem;
+}
+
+.pricingBox {
+    text-align: center;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.322);
+    margin-bottom: 0.8rem;
+}
+
+.pricingBox h4 {
+    font-weight: 700;
+    padding: 0.5 0;
+    margin-bottom: 0;
+}
+.pricingBox h5 {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.pricingBox .pricePlan {
+    font-weight: 600;
+    margin: 0.7rem 0;
+}
+
+.planDescription{
+    font-size: 15px;
+    color: #777;
+    line-height: 1.8;
+}
+.pricingCard li {
+    list-style: none;
+    margin: 0.2rem 0;
+}
+.ph1, 
+.ph2, 
+.ph3, 
+.ph4,
+.ph5,
+.ph6 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.pricingCard1 {
+    background: #FFD2C4;
+}
+.ph1, 
+.pricingCard1 > li > .checkIcon {
+    color: #FF4F66;
+}
+
+.pricingCard2 {
+    background: #D0FFE7;
+}
+.ph2, 
+.pricingCard2 > li > .checkIcon {
+    color: #11d87b;
+}
+
+.pricingCard3 {
+    background: #fce1ff;
+}
+.ph3, 
+.pricingCard3 > li > .checkIcon {
+    color: #f565ff;
+}
+
+.pricingCard4 {
+    background: #d2efff;
+}
+.ph4, 
+.pricingCard4 > li > .checkIcon {
+    color: #5bc5ff;
+}
+
+.pricingCard5 {
+    background: #ded9ff;
+}
+.ph5, 
+.pricingCard5 > li > .checkIcon {
+    color: #755BFF;
+}
+
+.pricingCard6 {
+    background: #fff1d5;
+}
+.ph6, 
+.pricingCard6 > li > .checkIcon {
+    color: #f5c800;
+}
+
+
+@media (max-width: 768px) {
+    .pricingNav {
+        display: flex;
+    }
+}
