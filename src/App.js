@@ -10,6 +10,7 @@ import Profile from './component/Dashoboard/Profile/Profile';
 import OrderList from './component/Dashoboard/OrderList/OrderList';
 import AddService from './component/Dashoboard/AddService/AddService';
 import MakeAdmin from './component/Dashoboard/MakeAdmin/MakeAdmin';
+import ManageServices from './component/Dashoboard/ManageServices/ManageServices';
 const App = () => {
   return (
     <div>
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="orderList" element={<OrderList/>} />
           <Route path="addService" element={<AddService/>} />
           <Route path="makeAdmin" element={<MakeAdmin/>} />
+          <Route path="manageServices" element={<ManageServices/>} />
         </Route>
       </Routes>
     </div>
