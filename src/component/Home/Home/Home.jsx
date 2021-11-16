@@ -1,5 +1,5 @@
 import React from 'react';
-// import Header from '.;
+import Header from '../Header/Header';
 // import ScrollTop from '../../Shared/ScrollTop/ScrollTop';
 // import About from '../About/About';
 // import Contact from '../Contact/Contact';
@@ -12,8 +12,7 @@ import React from 'react';
 const Home = () => {
     return (
         <main>
-            <h1>hellow </h1>
-            {/* <Header/> */}
+            <Header/>
             {/* <About/>
             <Services/>
             <OurValue/>
