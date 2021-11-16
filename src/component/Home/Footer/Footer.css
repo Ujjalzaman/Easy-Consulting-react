@@ -1,0 +1,198 @@
+.footer {
+    background: #7355F7;
+    background-image: url('../../../Assets/footerbg.png');
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin: 0!important;
+}
+.footerBox .footerLogo {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0px 60px 0 rgb(0 0 0 / 20%);
+    height: 70px;
+    padding: 0.5rem;
+}
+.linkIcon {
+    color: #6F53EF;
+    font-size: 2rem;
+    cursor: pointer;
+    background: white;
+    padding: 5px;
+    margin: 0 0.5rem;
+    border-radius: 0.3rem;
+}
+.footerLink,
+.fAboutUs {
+    padding: 1.5rem 2rem;
+}
+
+.footerLink h5,
+.fAboutUs h5 {
+    color: rgba(240, 255, 255, 0.925);
+    padding-top: 0.5rem;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+}
+.footerLink h5 {
+    padding-bottom: 0.5rem;
+}
+.footerLink h5::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 60px;
+    border-radius: 70px;
+    height: 4px;
+    background: rgba(240, 255, 255, 0.925);;
+}
+.footerLink > .aboutUsDes {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+.footerLink li {
+    list-style: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    transition: 0.4s;
+    margin: 1.1rem 0;
+    font-weight: 400;
+}
+.footerLink li:hover {
+    margin-left: 0.7rem;
+    color: #fff;
+}
+
+.footerLink a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+.footerLink a:hover {
+    text-decoration: none;
+}
+.footArrowIcon {
+    font-size: 0.9rem;
+}
+
+.fAboutUs p {
+    color: rgba(255, 255, 255, 0.699);
+    font-weight: 400;
+    margin: 1rem 0;
+
+}
+.fAboutUs ul {
+    margin: 0;
+    padding: 0;
+}
+.fAboutUs li {
+    list-style: none;
+    float: left;
+}
+.fAboutUs li a {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.5rem;
+    background: #fff;
+    margin-right: 5px;
+    color:#7355F7;
+    transition: 0.4s;
+}
+.fAboutUs li a:hover{
+    background: #4B24F5;
+    color: #fff;
+}
+
+.copyRight {
+    background-color: #2608AB;
+    color: rgba(255, 255, 255, 0.692);
+    font-weight: 400;
+    font-size: 0.911rem;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 1rem 0;
+}
+.copyRight > .fHighlight {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+/* FooterInfo */
+
+.footerInfo {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 3rem 0 2rem;
+}
+
+.fContactInfo p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    margin-left: 0.7rem;
+}
+.fContactIcon {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.822);
+}
+
+.fContactInfo1  p {
+    color: #fff!important;
+    font-weight: 500;
+    font-size: 1.5rem!important;
+}
+.fContactInfo1 .fContactIcon {
+    color: #fff;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+
+/* Animation border */
+
+.animate-border {
+    position: relative;
+    display: block;
+    width: 115px;
+    height: 3px;
+    background: #2608AB;
+}
+  
+.animate-border:after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    border-left: 20px solid #fff;
+    -webkit-animation: animborder 3s linear infinite;
+    animation: animborder 3s linear infinite;
+  }
+  
+@-webkit-keyframes animborder {
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    100% {
+        -webkit-transform: translateX(81px);
+        transform: translateX(81px);
+    }
+}
+  
+@keyframes animborder {
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    100% {
+        -webkit-transform: translateX(81px);
+        transform: translateX(81px);
+    }
+}
