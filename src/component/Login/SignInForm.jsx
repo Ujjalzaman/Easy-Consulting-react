@@ -31,7 +31,7 @@ const SignInForm = ({handleResponse}) => {
         })
     }
     return (
-        <form onSubmit={handleSubmit(onSubmit)} class="sign-in-form">
+        <form onSubmit={handleSubmit(onSubmit)} className="sign-in-form">
             <Toast show={show} onClose={() => setShow(!show)} className="signInToast">
                 <Toast.Header>
                     <img src={`${ifoIcon}`} className="circle mr-2 toastIcon" alt=""/>
@@ -39,8 +39,8 @@ const SignInForm = ({handleResponse}) => {
                 </Toast.Header>
                 <Toast.Body>Use this account to sign in as a admin, to test admin panel. Sign in with different account as a user</Toast.Body>
             </Toast>
-            <h2 class="title">Sign in</h2>
-            <div class="input-field">
+            <h2 className="title">Sign in</h2>
+            <div className="input-field">
                 <span className="fIcon"><FontAwesomeIcon icon={faEnvelope}/></span>
                 <input defaultValue='test@admin.com' placeholder="Email" {...register("email", { required: true })} />
             </div>
@@ -51,7 +51,7 @@ const SignInForm = ({handleResponse}) => {
             </div>
             {errors.password && <span className="text-warning">This field is required</span>}
             <input className="iBtn" type="submit" value="sign In"/>
-            <p class="social-text">Or Sign in with social platforms</p>
+            <p className="social-text">Or Sign in with social platforms</p>
             <SocialMedia handleResponse={handleResponse}/>
         </form>
     );

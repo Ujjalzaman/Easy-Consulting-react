@@ -23,7 +23,7 @@ const SocialMedia = ({handleResponse}) => {
         })
     }
     return (
-        <div class="social-media">
+        <div className="social-media">
             <div onClick={() => handleSignIn(googleProvider)} className="social-icon">
                 <FontAwesomeIcon icon={faGoogle}/>
             </div>

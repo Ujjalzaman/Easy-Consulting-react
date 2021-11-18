@@ -22,18 +22,18 @@ const SignUpForm = ({handleResponse}) => {
         })
     }
     return (
-        <form onSubmit={handleSubmit(onSubmit)} class="sign-up-form">
+        <form onSubmit={handleSubmit(onSubmit)} className="sign-up-form">
             <h2 className="title">Sign Up</h2>
-            <div class="input-field">
+            <div className="input-field">
                 <span className="fIcon"><FontAwesomeIcon icon={faUser}/></span>
                 <input placeholder="Name" {...register("email", { required: true })} />
             </div>
-            <div class="input-field">
+            <div className="input-field">
                 <span className="fIcon"><FontAwesomeIcon icon={faEnvelope}/></span>
                 <input placeholder="Email" {...register("email", { required: true })} />
             </div>
             {errors.email && <span className="text-warning">This field is required</span>}
-            <div class="input-field">
+            <div className="input-field">
                 <span className="fIcon"><FontAwesomeIcon icon={faLock}/></span>
                 <input type="password" placeholder="Password" {...register("password", { required: true })} />
             </div>
