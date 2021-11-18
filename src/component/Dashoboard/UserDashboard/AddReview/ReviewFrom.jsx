@@ -5,58 +5,58 @@ import { useForm } from 'react-hook-form';
 import { useParams,useNavigate  } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-// import swal from 'sweetalert';
-// import { UserContext } from '../../../../App';
+import { UserContext } from '../../../../App';
+import swal from 'sweetalert';
 
 const ReviewForm = ({setIsUpdated}) => {
-    // const {user: {email, img}} = useContext(UserContext)
-    // const {id} = useParams();
+    const {user: {email, img}} = useContext(UserContext)
+    const {id} = useParams();
     const { register, handleSubmit, reset } = useForm();
-    // const [review, setReview] = useState({});
-    // const {name, address, description} = review;
-    // useEffect(() => {
-    //     axios(`https://trusted-tech.herokuapp.com/userReview/${id}`)
-    //     .then(res => {
-    //         setReview(res.data[0]);
-    //     })
-    // }, [id])
+    const [review, setReview] = useState({});
+    const {name, address, description} = review;
+    useEffect(() => {
+        axios(`https://immense-river-40491.herokuapp.com/userReview/${id}`)
+        .then(res => {
+            setReview(res.data[0]);
+        })
+    }, [id])
     
-    // const history = useNavigate ();
+    const history = useNavigate ();
     const onSubmit = data => {
-    //     const loading = toast.loading('Uploading...Please wait!');
-    //     const reviewData = {...data};
-    //         reviewData.email = review.email || email;
-    //         reviewData.img = review.img || img;
-    //     if(id){
-    //         axios.patch(`https://immense-river-40491.herokuapp.com/updateReview/${id}`, reviewData)
+        const loading = toast.loading('Uploading...Please wait!');
+        const reviewData = {...data};
+            reviewData.email = review.email || email;
+            reviewData.img = review.img || img;
+        if(id){
+            axios.patch(`https://immense-river-40491.herokuapp.com/updateReview/${id}`, reviewData)
             
-    //         .then(res => {
-    //             if(res){
-    //                 toast.dismiss(loading);
-    //                 if(
-    //                     data.name === name &&
-    //                     data.address === address &&
-    //                     data.description === description
-    //                     ){
-    //                         toast.error("You haven't changed anything")
-    //                     }else{
-    //                         toast.success('your review was successful updated!');
-    //                     }
-    //                 history.push('/dashboard/review');
-    //             }
-    //         })
-    //     }else {
-    //         setIsUpdated(false)
-    //         axios.post('https://immense-river-40491.herokuapp.com/addReview', reviewData)
-    //         .then(res => {
-    //             if(res){
-    //                 setIsUpdated(true)
-    //                 toast.dismiss(loading);
-    //                 swal("Success!", "Your review has been submitted successfully. We appreciate your contirbution.", "success");
-    //             }
-    //         })
-    //     }
-    //     reset();
+            .then(res => {
+                if(res){
+                    toast.dismiss(loading);
+                    if(
+                        data.name === name &&
+                        data.address === address &&
+                        data.description === description
+                        ){
+                            toast.error("You haven't changed anything")
+                        }else{
+                            toast.success('your review was successful updated!');
+                        }
+                    history.push('/dashboard/review');
+                }
+            })
+        }else {
+            setIsUpdated(false)
+            axios.post('https://immense-river-40491.herokuapp.com/addReview', reviewData)
+            .then(res => {
+                if(res){
+                    setIsUpdated(true)
+                    toast.dismiss(loading);
+                    swal("Success!", "Your review has been submitted successfully. We appreciate your contirbution.", "success");
+                }
+            })
+        }
+        reset();
     }
     return (
         <section className='px-3'>
@@ -67,7 +67,7 @@ const ReviewForm = ({setIsUpdated}) => {
                                 <Form.Label style={{ fontWeight: "bold" }}>Your Name</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    // defaultValue={name || ""}
+                                    defaultValue={name || ""}
                                     {...register("name", { required: true })}
                                     placeholder="Your Name" />
                             </Form.Group>
