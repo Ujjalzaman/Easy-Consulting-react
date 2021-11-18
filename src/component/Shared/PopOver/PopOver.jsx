@@ -27,9 +27,9 @@ const PopOver = () => {
         })
     }
     return (
-        <div ref={ref}>
+        <div >
             <img src={img} alt="" onClick={handleClick} className="popImg"/>
-            <Overlay
+             <Overlay
                 show={show}
                 target={target}
                 placement="bottom"
@@ -37,14 +37,14 @@ const PopOver = () => {
                 containerPadding={50}
             >
                 <Popover id="popover-contained">
-                    <Popover.Content className="text-center">
+                    <div className="text-center">
                         <img src={img} alt="" className="popUserImg"/>
                         <p className="userName">{`${name}`}</p>
                         <p className="userEmail">{email}</p>
                         <Button variant="outline-danger" size="sm" onClick={signOut}>Log out</Button>
-                    </Popover.Content>
-                </Popover>
-            </Overlay>
+                    </div>
+                 </Popover> 
+            </Overlay> 
         </div>
     );
 };

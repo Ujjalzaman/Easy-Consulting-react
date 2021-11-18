@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart, faCommentAlt, faUserPlus, faCog, faFileMedical, faList, faUserAlt, faUserCircle} from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faCommentAlt, faUserPlus, faCog, faFileMedical, faList, faUserCircle} from '@fortawesome/free-solid-svg-icons'
 import { faBuffer } from '@fortawesome/free-brands-svg-icons';
 import { UserContext } from '../../../App';
 
@@ -15,7 +15,7 @@ const Sidebar = ({setTitle}) => {
                 <div className="sideBrnIcon">
                     <FontAwesomeIcon icon={faBuffer}/>
                     </div>
-                <h2>Trusted <span className="navHighlight">Tech</span></h2>
+                <h2>Easy <span className="navHighlight">Consulting</span></h2>
             </div>
             <nav id="sideNavbar">
                 <ul>    

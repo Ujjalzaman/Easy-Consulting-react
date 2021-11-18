@@ -29,7 +29,7 @@ const Profile = () => {
                         {email}
                     </h5>
                     <button className="mainBtn mt-3" 
-                    onClick={handleSignOut}
+                    onClick={signOut}
                     >Log out</button>
                 </div>
             </div>

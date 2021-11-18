@@ -1,18 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Profile from '../Profile/Profile';
-import { Outlet } from 'react-router';
 import OrderList from '../OrderList/OrderList';
 import AddService from '../AddService/AddService';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageServices from '../ManageServices/ManageServices';
-
-
-// import Profile from '../../Profile/Profile';
-// import AddService from '../AddService/AddServices';
-// import MakeAdmin from '../MakeAdmin/MakeAdmin';
-// import ManageServices from '../ManageServices/ManageServices';
-// import OrderList from '../OrderList/OrderList';
 
 const AdminDashboard = () => {
     return (

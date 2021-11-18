@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Service.css'
-// import {UserContext} from '../../../App'
 import Fade from 'react-reveal/Fade';
 import './Service.css';
+import { UserContext } from '../../../App';
 
 const Service = ({service}) => {
-    // const { admin, setSelectedService } = useContext(UserContext)
+    const { admin, setSelectedService } = useContext(UserContext)
     const {name, price, description, img} = service;
     
     return (
@@ -20,11 +20,11 @@ const Service = ({service}) => {
                     <p className="serviceDes">{description}</p>
                     <div className="bookingBox">
                         <p className="servicePrice">${price}</p>
-                        {/* <Link className="serviceLink" to={admin ? '/dashboard/orderList' : '/dashboard/book'}> */}
+                        <Link className="serviceLink" to={admin ? '/dashboard/orderList' : '/dashboard/book'}>
                             <button className="bookingBtn" 
-                            // onClick={() => setSelectedService(service)}
+                            onClick={() => setSelectedService(service)}
                             >Book Now</button>
-                        {/* </Link> */}
+                        </Link>
                     </div>
                 </div>
             </Fade>

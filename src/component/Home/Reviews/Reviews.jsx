@@ -53,9 +53,9 @@ const Reviews = () => {
                             <div className="text-center">
                                 <Spinner/>
                             </div>: 
-                            reviews.map(review => {
+                            reviews.map((review, id) => {
                                 return(
-                                    <SwiperSlide>
+                                    <SwiperSlide key={id}>
                                         <Review review={review} key={review._key}/>
                                     </SwiperSlide>
                                 )

@@ -7,7 +7,7 @@ const Services = () => {
     const [services, setServices] = useState([])
     
     useEffect(() => {
-        axios.get('https://trusted-tech.herokuapp.com/services')
+        axios.get('https://immense-river-40491.herokuapp.com/services')
         .then(res => setServices(res.data))
     }, [])
 
@@ -20,7 +20,7 @@ const Services = () => {
             {services.length === 0 && <div className="spinner text-center"><Spinner/></div>}
             <div className="row mt-4 container mx-auto justify-content-center">
                 {
-                    services?.map(service => <Service key={service._key} service={service}/>)
+                    services?.map((service, id) => <Service key={service._key + id} service={service}/>)
                 }
             </div>
         </section>

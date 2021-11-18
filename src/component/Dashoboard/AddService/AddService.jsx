@@ -1,11 +1,11 @@
-// import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-// import toast from 'react-hot-toast';
-// import swal from 'sweetalert';
+import toast from 'react-hot-toast';
+import swal from 'sweetalert';
 import './AddService.css'
 
 const AddService = ({edit, setEdit, services}) => {
@@ -15,65 +15,65 @@ const AddService = ({edit, setEdit, services}) => {
     const [isDisabled, setIsDisabled] = useState(false);
     const {name, price, description, img} = service || {};
 
-    // useEffect(() => {
-    //     const getService = services?.find(({_id}) => _id === edit);
-    //     setService(getService)
-    // }, [edit, services])
+    useEffect(() => {
+        const getService = services?.find(({_id}) => _id === edit);
+        setService(getService)
+    }, [edit, services])
 
     const onSubmit = data => {
-        // const loading = toast.loading('Uploading...');
-        // const serviceInfo = {
-        //     ...data,
-        //     img: imgURL || img
-        // }
+        const loading = toast.loading('Uploading...');
+        const serviceInfo = {
+            ...data,
+            img: imgURL || img
+        }
 
-        // if(edit){
-        //     axios.patch(`https://trusted-tech.herokuapp.com/updateService/${edit}`, serviceInfo)
-        //     .then(res =>{
-        //         toast.dismiss(loading)
-        //         if( data.name === name  && 
-        //             data.price === price &&
-        //             data.description === description){
-        //                 toast.error("You haven't change anything")
-        //             }
-        //             else{
-        //                 toast.success('Service updated successfully')
-        //             }
-        //         setEdit(null)
-        //     })
-        // }else{
-        //     axios.post('https://trusted-tech.herokuapp.com/addService', serviceInfo)
-        //     .then(res => {
-        //         toast.dismiss(loading)
-        //         if(res.data){
-        //             swal('Success!', 'One new service added successfully', 'success')
-        //             reset()
-        //         }
-        //     })
-        //     .catch( error => {
-        //         toast.dismiss(loading)
-        //         toast.error(error.message)
-        //     });
-        // }
+        if(edit){
+            axios.patch(`https://immense-river-40491.herokuapp.com/updateService/${edit}`, serviceInfo)
+            .then(res =>{
+                toast.dismiss(loading)
+                if( data.name === name  && 
+                    data.price === price &&
+                    data.description === description){
+                        toast.error("You haven't change anything")
+                    }
+                    else{
+                        toast.success('Service updated successfully')
+                    }
+                setEdit(null)
+            })
+        }else{
+            axios.post('https://immense-river-40491.herokuapp.com/addService', serviceInfo)
+            .then(res => {
+                toast.dismiss(loading)
+                if(res.data){
+                    swal('Success!', 'One new service added successfully', 'success')
+                    reset()
+                }
+            })
+            .catch( error => {
+                toast.dismiss(loading)
+                toast.error(error.message)
+            });
+        }
     }
 
     const handleImgUpload = event => {
-        // const loading = toast.loading('Image uploading...');
-        // setIsDisabled(true)
-        // const imgData = new FormData();
-        // imgData.set('key', '158d6aaa1f29311c98e50373ddc8e3d6');
-        // imgData.append('image', event.target.files[0])
-        // axios.post('https://api.imgbb.com/1/upload', imgData)
-        // .then( response => {
-        //     toast.dismiss(loading)
-        //     toast.success('Image successfully uploaded')
-        //     setImgURL(response.data.data.url)
-        //     setIsDisabled(false)
-        // })
-        // .catch( error => {
-        //     toast.dismiss(loading)
-        //     toast.error(error.message)
-        // });
+        const loading = toast.loading('Image uploading...');
+        setIsDisabled(true)
+        const imgData = new FormData();
+        imgData.set('key', 'd397289afc04f776659233bc4fe00dbc');
+        imgData.append('image', event.target.files[0])
+        axios.post('https://api.imgbb.com/1/upload', imgData)
+        .then( response => {
+            toast.dismiss(loading)
+            toast.success('Image successfully uploaded')
+            setImgURL(response.data.data.url)
+            setIsDisabled(false)
+        })
+        .catch( error => {
+            toast.dismiss(loading)
+            toast.error(error.message)
+        });
     }
     return (
         <div className="px-2">
@@ -111,7 +111,7 @@ const AddService = ({edit, setEdit, services}) => {
                             as={"label"}
                             htmlFor="upload"
                             className="d-block p-2 uploadBtn">
-                            {/* <FontAwesomeIcon icon={faCloudUploadAlt} className="mr-2" /> */}
+                            <FontAwesomeIcon icon={faCloudUploadAlt} className="mr-2" />
                             Upload Image
                         </Button>
                         <Form.Control

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Outlet } from 'react-router'
 import Profile from '../../Profile/Profile'
 import { Routes, Route } from 'react-router-dom'
 import BookList from '../BookList/BookList'

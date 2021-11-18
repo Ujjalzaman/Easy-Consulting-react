@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faFacebook, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import FooterCol from './FooterCol';
 import './Footer.css';
 import { usefulLink, ourServices, otherLinks, footerInfo } from '../../FooterData';
@@ -12,7 +12,7 @@ import { scrollUP } from '../../Shared/ScrollTop/ScrollTop';
 
 const Footer = () => {
     return (
-        <section class='row footer'>
+        <section className='row footer'>
             <Row className="col-md-11 mx-auto">
                 <Row className="align-items-center footerInfo">
                     {
@@ -26,22 +26,22 @@ const Footer = () => {
                     <ul className="socialIcons">
                         <li>
                             <Link onClick={scrollUP} to="/" >
-                                {/* <FontAwesomeIcon icon={faFacebook}/> */}
+                                <FontAwesomeIcon icon={faFacebook}/>
                                 </Link>
                         </li>
                         <li>
                             <Link onClick={scrollUP} to="/">
-                                {/* <FontAwesomeIcon icon={faTwitter}/> */}
+                                <FontAwesomeIcon icon={faTwitter}/>
                                 </Link>
                         </li>
                         <li>
                             <Link onClick={scrollUP} to="/">
-                                {/* <FontAwesomeIcon icon={faInstagram}/> */}
+                                <FontAwesomeIcon icon={faInstagram}/>
                             </Link>
                         </li>
                         <li>
                             <Link onClick={scrollUP} to="/">
-                                {/* <FontAwesomeIcon icon={faLinkedinIn}/> */}
+                                <FontAwesomeIcon icon={faLinkedinIn}/>
                             </Link>
                         </li>
                     </ul>
