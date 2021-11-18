@@ -1,13 +1,28 @@
-import React, {useState} from 'react'
-import './Dashboard.css';
-import Sidebar from '../Sidebar/Sidebar';
-import {Link} from 'react-router-dom';
+import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import PopOver from '../../Shared/PopOver/PopOver';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
+import Sidebar from '../Sidebar/Sidebar';
 import UserDashboard from '../UserDashboard/UserDashboard/UserDashboard';
+import './Dashboard.css';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { UserContext } from '../../../App';
 
 const Dashboard = () => {
+    const { user, admin, setAdmin } = useContext(UserContext);
     const [sideToggle, setSideToggle] = useState(false)
-    const [title, setTitle] = useState('Trusted Tech')
+    const [title, setTitle] = useState('Easy Consulting')
+
+    useEffect(() => {
+        axios.get(`https://immense-river-40491.herokuapp.com/admin?email=${user.email}`)
+        .then(res => {
+            if(res.data.length > 0){
+                setAdmin(true)
+            }
+        })
+    },[user.email, admin, setAdmin])
 
     return (
         <div id="dashboard">
@@ -17,7 +32,7 @@ const Dashboard = () => {
                     <div className="backBtnBox">
                         <Link to="/">
                             <button className="backBtn"> 
-                            {/* <FontAwesomeIcon icon={faSignOutAlt}/> */}
+                            <FontAwesomeIcon icon={faSignOutAlt}/>
                              back to home</button>
                         </Link>
                     </div>
@@ -38,13 +53,11 @@ const Dashboard = () => {
                         </div>
                         <h3>{title}</h3>
                     </div>
-                    {/* <PopOver/> */}
+                    <PopOver/> 
                 </div>
-                {/* <AdminDashboard/> */}
-                <UserDashboard/>
-                {/* {
+                 {
                     admin ? <AdminDashboard/> : <UserDashboard/>
-                } */}
+                } 
             </div>
         </div>
     )
