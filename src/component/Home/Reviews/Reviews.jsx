@@ -4,8 +4,6 @@ import Review from './Review';
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-// import "swiper/swiper.min.css";
-// import "swiper/components/pagination/pagination.min.css";
 import SwiperCore, { Autoplay, Pagination } from 'swiper/core'
 import Spinner from '../../Shared/Spinner/Spinner';
 
@@ -13,7 +11,7 @@ const Reviews = () => {
     SwiperCore.use([Pagination, Autoplay]);
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('https://trusted-tech.herokuapp.com/reviews')
+        fetch('https://immense-river-40491.herokuapp.com/reviews')
         .then(res => res.json())
         .then(data => {
             setReviews(data);

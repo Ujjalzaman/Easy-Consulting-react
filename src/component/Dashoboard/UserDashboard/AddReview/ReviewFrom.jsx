@@ -42,7 +42,7 @@ const ReviewForm = ({setIsUpdated}) => {
                         }else{
                             toast.success('your review was successful updated!');
                         }
-                    history.push('/dashboard/review');
+                        history('/dashboard/review');
                 }
             })
         }else {
