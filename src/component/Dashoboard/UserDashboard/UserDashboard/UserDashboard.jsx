@@ -11,10 +11,8 @@ const UserDashboard = () => {
         <Routes>
             <Route path="profile" element={<Profile />} />
             <Route path="book" element={<Book />} />
-            {/* <Route path="book/:id" element={<Book />} /> */}
-
+            <Route path="book/:id" element={<Book />} />
             <Route path="booking" element={<BookList />} />
-
             <Route path="review" element={<Review />} />
             <Route path="review/:id" element={<ReviewForm />} />
         </Routes>

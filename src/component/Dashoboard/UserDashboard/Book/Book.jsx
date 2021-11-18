@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import {UserContext} from '../../../../App'
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
-// import CheckoutForm from './CheckoutForm';
 import { Form, Col, Row, Toast } from 'react-bootstrap';
 import './Book.css'
 import axios from 'axios';
@@ -10,27 +9,26 @@ import ifoIcon from '../../../../Assets/info.svg';
 import Checkout from './Checkout';
 
 const Book = () => {
-    // const { selectedService , setSelectedService } = useContext(UserContext)
+    const { selectedService , setSelectedService } = useContext(UserContext)
     const [services, setServices] = useState([]);
     const [show, setShow] = useState(true);
 
-    // useEffect(() => {
-    //     axios.get(`https://trusted-tech.herokuapp.com/services`)
-    //     .then(res => {
-    //         setServices(res.data)
-    //         if(!selectedService.name){
-    //             setSelectedService(res.data[0])
-    //         }
-    //     })
-    // }, [selectedService.name, setSelectedService])
+    useEffect(() => {
+        axios.get(`https://immense-river-40491.herokuapp.com/services`)
+        .then(res => {
+            setServices(res.data)
+            if(!selectedService.name){
+                setSelectedService(res.data[0])
+            }
+        })
+    }, [selectedService.name, setSelectedService])
 
     const handleSelection = e => {
-        // const getService = services.find(({name}) => e.target.value === name)
-        // setSelectedService(getService)
+        const getService = services.find(({name}) => e.target.value === name)
+        setSelectedService(getService)
     }
 
-    const stripePromise = loadStripe('pk_test_51IeH1tCIW0BkrTRE8d8afxDs1DeFYm5stqp4qvLPKUpAUCNdfkEn1q1MOwS6ZLdgpNJNDfjIPs0aF29kZ2yeqTok00HDaxItJY');
-
+    const stripePromise = loadStripe('pk_test_51Ii2KaCKKXM4eFaOJWCOr8pS4GVkoCerGCRHefo7hDpLYMcjpGqPNpoeydvFApWXDSSMnfXNzdtwRcF1o8XmTk3H00xDH8wKZc');
     setTimeout(() => {
         setShow(false);
     }, 7000)
@@ -49,18 +47,18 @@ const Book = () => {
                 <Col md={6} xs={12} className="my-3">
                     <Form.Label style={{ fontWeight: "bold" }}>Service</Form.Label>
                     <select class="form-select" onChange={handleSelection}>
-                        {/* {selectedService.name &&  */}
-                            {/* <option className="activeService" value={selectedService.name}>{selectedService.name}</option> */}
-                        {/* } */}
-                        {/* { */}
-                            {/* services?.map(({id, name}) => <option key={id} value={name}>{name}</option>) */}
-                        {/* } */}
+                        {selectedService.name && 
+                             <option className="activeService" value={selectedService.name}>{selectedService.name}</option> 
+                         } 
+                        { 
+                         services?.map(({id, name}) => <option key={id} value={name}>{name}</option>) 
+                        }
                     </select>
                 </Col>
                 <Col md={6} xs={12} className="my-3">
                         <Form.Label style={{ fontWeight: "bold" }}>Price</Form.Label>
                         <div className="priceInput">
-                            {/* {selectedService.price} */}
+                         {selectedService.price}
                             </div>
                 </Col>
             </Row>

@@ -1,57 +1,57 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import React, { useContext, useEffect, useState } from 'react';
-// import toast from 'react-hot-toast';
-// import swal from 'sweetalert';
-// import { UserContext } from '../../../../App';
+import toast from 'react-hot-toast';
+import swal from 'sweetalert';
+import { UserContext } from '../../../../App';
 import './BookList.css'
-// import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import ListSkeleton from '../../../Shared/TableOrder/ListSkeleton';
 
 const BookList = () => {
-    // const { user } = useContext(UserContext);
+    const { user } = useContext(UserContext);
     const [bookings, setBookings] = useState([]);
     const [isUpdated, setIsUpdated] = useState(false);
 
-    // useEffect(() => {
-    //     axios.get(`https://trusted-tech.herokuapp.com/bookingList?email=${user.email}`)
-    //     .then(res => setBookings(res.data))
-    // },[user.email, isUpdated])
+    useEffect(() => {
+        axios.get(`https://immense-river-40491.herokuapp.com/bookingList?email=${user.email}`)
+        .then(res => setBookings(res.data))
+    },[user.email, isUpdated])
 
     const handleDelete = (id, status) => {
-        // setIsUpdated(false)
-        // swal({
-        //     title: `${status === 'Done' ? "Remove" : "Cancel"} Booking?`,
-        //     text: `Are you sure! you want to ${status === 'Done' ? "remove booking from your booking List" : "cancel"}?`,
-        //     icon: "warning",
-        //     buttons: true,
-        //     dangerMode: true,
-        //   })
-        //   .then( wantDelete => {
-        //     if (wantDelete) {
-        //         const loading = toast.loading('deleting...Please wait!')
-        //         axios.delete(`https://trusted-tech.herokuapp.com/deleteOrder/${id}`)
-        //         .then(res => {
-        //             toast.dismiss(loading)
-        //             if(res){
-        //                 setIsUpdated(true);
-        //                 toast.success('Your Booking is successfully canceled!');
-        //             }
-        //             else{
-        //                 toast.error('Something went wrong, please try again');
-        //             }
-        //         })
-        //         .catch(err => {
-        //             toast.dismiss(loading)
-        //             swal({
-        //                 title: "Failed!",
-        //                 text: 'Something went wrong, please try again',
-        //                 icon: "error",
-        //               });
-        //         })
-        //     } 
-        //   });
+        setIsUpdated(false)
+        swal({
+            title: `${status === 'Done' ? "Remove" : "Cancel"} Booking?`,
+            text: `Are you sure! you want to ${status === 'Done' ? "remove booking from your booking List" : "cancel"}?`,
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then( wantDelete => {
+            if (wantDelete) {
+                const loading = toast.loading('deleting...Please wait!')
+                axios.delete(`https://immense-river-40491.herokuapp.com/deleteOrder/${id}`)
+                .then(res => {
+                    toast.dismiss(loading)
+                    if(res){
+                        setIsUpdated(true);
+                        toast.success('Your Booking is successfully canceled!');
+                    }
+                    else{
+                        toast.error('Something went wrong, please try again');
+                    }
+                })
+                .catch(err => {
+                    toast.dismiss(loading)
+                    swal({
+                        title: "Failed!",
+                        text: 'Something went wrong, please try again',
+                        icon: "error",
+                      });
+                })
+            } 
+          });
     }
     return (
         <div>
@@ -70,7 +70,7 @@ const BookList = () => {
                                 <h6>{serviceName}</h6>
                                 <p>{description}</p>
                                 <Button variant="outline-danger" onClick={() => handleDelete(_id, status)}> 
-                                    {/* <FontAwesomeIcon icon={faTimesCircle}/> */}
+                                    <FontAwesomeIcon icon={faTimesCircle}/>
                                      { status === 'Done' ? 'Remove':'Cancel'}
                                 </Button>
                             </div>
