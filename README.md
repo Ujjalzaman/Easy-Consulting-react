@@ -1,11 +1,3 @@
-<!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -24,26 +16,12 @@
     <br />
     <a href="https://wonderful-kowalevski-8c905c.netlify.app/">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/Ujjalzaman/Easy-Consulting-react/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/Ujjalzaman/Easy-Consulting-react/issues">Request Feature</a>
   </p>
 </div>
 
-# Easy Consulting 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#contributing">tecknology</a></li>
-    <li><a href="#contributing">Features</a></li>
-    <li><a href="#contributing">Installation</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
 
 ## Tech Stack
 - [React](https://facebook.github.io/react/)
@@ -128,11 +106,6 @@ What you get here:
 * payement system(here used only Stripe in near will add more payment gateway)
 * Deffrent for Dasboard(Admin and User)
 * in dashboard Admin has all kinds of access(CRUD operations, add admin, manage orders and many more)
-
-
-<!-- Project Challenges -->
-## Project Challenges
-
 
 ## Contact
 
