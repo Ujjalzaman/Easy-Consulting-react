@@ -36,22 +36,10 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">tecknology</a></li>
+    <li><a href="#contributing">Features</a></li>
+    <li><a href="#contributing">Installation</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -59,38 +47,53 @@
 
 ## Tech Stack
 - [React](https://facebook.github.io/react/)
+- [JavaScripp(ES6)](https://facebook.github.io/react/)
 - [Firebase](https://firebase.google.com/)
 - [Firestore](https://firebase.google.com/docs/firestore)
 - [Firebase Authentication](https://firebase.google.com/docs/auth)
 - [Material-UI](https://material-ui.com/)
 - [Webpack](https://webpack.js.org/)
 - [FileSaver](https://www.npmjs.com/package/file-saver)
-- [thum.io](https://www.thum.io/)
-
-
+- [React-Bootstrape](#)
+- [Context API](#)
+- [stripe](#)
+- [React-router-dom v-6](#)
+- [Express](#)
+- [MongoDb](#)
+- [Node.js](#)
+- [More...](#)
 
 ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Ujjalzaman/Easy-Consulting-react
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   or
+   ```sh
+   yarn add
    ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
+   
+3. Start the project
+    ```sh
+   npm start
+   ```
+   or
+   ```sh
+   yarn start
+   ```
+ <p align="left">For this project you have to create firebase console for authentication , mongodb for database and stripe for payment gateway.</p>
+ <p>After then put all the credential env file respectly for backend keep them in root folder</p>
+ <p>create a jsx file in root and add here firbase config info</p>
+ <p>eventully if you having any issues startin this project fill free to contact me. love to help you.</p>
+ 
+ 
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -105,96 +108,34 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/ujjal_zaman) - ujjal zaman
-
-Project Link: [https://github.com/Ujjalzaman/Easy-Consulting-react](https://github.com/Ujjalzaman/Easy-Consulting-react)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- ABOUT THE PROJECT -->
 ## Features
+This is fullstack softawre agency project. i have build this site in my leisure time only cool. that's why did'nt have much time added much functionalilty. but in future i will try add here more things.
+here i have implement context api for data handling. my plan was using redux or graphql using. but this is only testing project and i have time conflict that's why can't add that features.
+also love to add typeScript. right now my machine taking little time while compile typescript file, it's too hard me that using that site without typescript.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+What you get here:
+* implement responsive ui with first loading including backend
+* * MUI provides  styling and building Material-UI components quickly and easily
+* Most of the UI created react-bootstrap as well row css.
+* Few cases used MUI but in future i will add more MUI features here.:smile:
+* Responsive landing page.
+* user can give review, can purchase a product and see there status.
+* there most interting part is Login Page. this is amazing design and authentication system.
+* job portal site.
+* all the input are have to validate.
+* authenttication system(login, logout, signup, reset email, OTP, subscribe).
+* payement system(here used only Stripe in near will add more payment gateway)
+* Deffrent for Dasboard(Admin and User)
+* in dashboard Admin has all kinds of access(CRUD operations, add admin, manage orders and many more)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-* mymui provides two tools for styling and building Material-UI components quickly and easily
-* Theme Styler allows the customization of a Material-UI theme with a dynamic visual interface
-* Adjust color, button styling, typography, and alerts with palettes, switches, sliders + more
-* Download a custom theme and apply it to your project using Material-UI's ThemeProvider
-* Save and share your theme with the mymui community
-* Discover user created themes via the explore page
-* Star and bookmark your favorite themes
-* Grid Builder follows the 12 column grid system and visualizes how Material-UI structures grid layouts and positioning
-* Drag, drop, and resize grid containers, and observe the code adjust in real-time
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Project Challenges -->
 ## Project Challenges
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Grid Builder follows the 12 column grid system and visualizes how Material-UI structures grid layouts and positioning
-* Drag, drop, and resize grid containers, and observe the code adjust in real-time
-* Managing the number of props + state of the custom theme object throughout our application — more than four dozen parameters!
-* Assigning the logic of change handlers to different selection tools within the design page
-* Learning the functionality of a NoSQL database (Firestore), and the referencing of deeply nested objects
-* Firebase data flow, integration of Firebase + Google Cloud functions, and how authentication interacts with database
-* Implementing drag and drop functionality with vanilla Javascript rather than a library, and gaining an understanding of how implementation works under the hood
-* Building social aspects ie. starring and bookmarking themes — capturing and storing interactions between users
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-
-
-<!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+ujjal zaman - [Linkdeind](www.linkedin.com/in/ujjal-zaman)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+Project Link: [https://github.com/Ujjalzaman/Easy-Consulting-react](https://github.com/Ujjalzaman/Easy-Consulting-react)
