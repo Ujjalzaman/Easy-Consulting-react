@@ -8,6 +8,7 @@ import About from './component/Home/About/About';
 import Dashboard from './component/Dashoboard/Dashboard/Dashboard';
 import { getDecodedUser } from './component/Login/LoginManager';
 import LoginModal from './component/Login/LoginModal';
+import PrivateRoute from './component/Login/PrivateRoute';
 export const UserContext = createContext();
 
 const App = () => {
@@ -15,13 +16,18 @@ const App = () => {
   const [selectedService, setSelectedService] = useState({})
   const [user, setUser] = useState(getDecodedUser())
   return (
-    <UserContext.Provider value={{user, setUser, admin, setAdmin, selectedService, setSelectedService}}>
+    <UserContext.Provider value={{ user, setUser, admin, setAdmin, selectedService, setSelectedService }}>
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/dashboard/*" element={<Dashboard />} />
           <Route path="/login" element={<LoginModal />} />
+           <Route path="/dashboard/*" element={
+              <PrivateRoute redirectTo="/login">
+                <Dashboard />
+              </PrivateRoute>
+            }
+          /> 
         </Routes>
       </div>
     </UserContext.Provider>
