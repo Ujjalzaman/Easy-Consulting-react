@@ -1,71 +1,114 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="#">
+    <img src="https://image.freepik.com/free-vector/triangle-letter-ag-free-logo-design_8035-1.jpg" alt="Logo" width="80" height="80">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Easy Consulting</h3>
 
-## Available Scripts
+  <p align="center">
+    A Technonogly agency fullstack website build in react, mui , bootstrap and nodejs 
+    <br />
+    <a href="https://github.com/Ujjalzaman/Easy-Consulting-react"><strong>Explore the code here »</strong></a>
+    <br />
+    <a href="https://github.com/Ujjalzaman/easy-consult-server-express-mongo"><strong>Backend code here »</strong></a>
+    <br />
+    <a href="https://wonderful-kowalevski-8c905c.netlify.app/">View Demo</a>
+    ·
+    <a href="https://github.com/Ujjalzaman/Easy-Consulting-react/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Ujjalzaman/Easy-Consulting-react/issues">Request Feature</a>
+  </p>
+</div>
 
-In the project directory, you can run:
 
-### `yarn start`
+## Tech Stack
+- [React](https://facebook.github.io/react/)
+- [JavaScripp(ES6)](https://facebook.github.io/react/)
+- [Firebase](https://firebase.google.com/)
+- [Firestore](https://firebase.google.com/docs/firestore)
+- [Firebase Authentication](https://firebase.google.com/docs/auth)
+- [Material-UI](https://material-ui.com/)
+- [Webpack](https://webpack.js.org/)
+- [FileSaver](https://www.npmjs.com/package/file-saver)
+- [React-Bootstrape](#)
+- [Context API](#)
+- [stripe](#)
+- [React-router-dom v-6](#)
+- [Express](#)
+- [MongoDb](#)
+- [Node.js](#)
+- [More...](#)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-### `yarn test`
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Ujjalzaman/Easy-Consulting-react
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+   or
+   ```sh
+   yarn add
+   ```
+   
+3. Start the project
+    ```sh
+   npm start
+   ```
+   or
+   ```sh
+   yarn start
+   ```
+ <p align="left">For this project you have to create firebase console for authentication , mongodb for database and stripe for payment gateway.</p>
+ <p>After then put all the credential env file respectly for backend keep them in root folder</p>
+ <p>create a jsx file in root and add here firbase config info</p>
+ <p>eventully if you having any issues startin this project fill free to contact me. love to help you.</p>
+ 
+ 
+<!-- CONTRIBUTING -->
+## Contributing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### `yarn build`
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- ABOUT THE PROJECT -->
+## Features
+This is fullstack softawre agency project. i have build this site in my leisure time only cool. that's why did'nt have much time added much functionalilty. but in future i will try add here more things.
+here i have implement context api for data handling. my plan was using redux or graphql using. but this is only testing project and i have time conflict that's why can't add that features.
+also love to add typeScript. right now my machine taking little time while compile typescript file, it's too hard me that using that site without typescript.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+What you get here:
+* implement responsive ui with first loading including backend
+* * MUI provides  styling and building Material-UI components quickly and easily
+* Most of the UI created react-bootstrap as well row css.
+* Few cases used MUI but in future i will add more MUI features here.:smile:
+* Responsive landing page.
+* user can give review, can purchase a product and see there status.
+* there most interting part is Login Page. this is amazing design and authentication system.
+* job portal site.
+* all the input are have to validate.
+* authenttication system(login, logout, signup, reset email, OTP, subscribe).
+* payement system(here used only Stripe in near will add more payment gateway)
+* Deffrent for Dasboard(Admin and User)
+* in dashboard Admin has all kinds of access(CRUD operations, add admin, manage orders and many more)
 
-### `yarn eject`
+## Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ujjal zaman - [Linkdeind](www.linkedin.com/in/ujjal-zaman)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Easy-Consulting-react
+Project Link: [https://github.com/Ujjalzaman/Easy-Consulting-react](https://github.com/Ujjalzaman/Easy-Consulting-react)
