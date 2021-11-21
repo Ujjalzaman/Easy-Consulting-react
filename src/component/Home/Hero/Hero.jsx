@@ -36,7 +36,7 @@ const Hero = () => {
                             >
                                 <Typed
                                     strings={['Business', 'Startup']}
-                                    typeSpeed={80}
+                                    typeSpeed={100}
                                     loop={true}
                                 />
                             </Typography>
