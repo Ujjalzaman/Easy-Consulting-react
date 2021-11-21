@@ -9,6 +9,7 @@ import Dashboard from './component/Dashoboard/Dashboard/Dashboard';
 import { getDecodedUser } from './component/Login/LoginManager';
 import LoginModal from './component/Login/LoginModal';
 import PrivateRoute from './component/Login/PrivateRoute';
+import NotFound from './component/NotFound';
 export const UserContext = createContext();
 
 const App = () => {
@@ -27,7 +28,8 @@ const App = () => {
                 <Dashboard />
               </PrivateRoute>
             }
-          /> 
+          />
+          <Route path="*" element={<NotFound/>}/> 
         </Routes>
       </div>
     </UserContext.Provider>
