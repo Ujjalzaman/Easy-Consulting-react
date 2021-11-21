@@ -62,6 +62,10 @@
 .loginBtn:hover { 
     background : #4B24F5
 }
+.navActiveClass{
+    color:"red";
+    font-weight:900;
+}
 
 @media (max-width: 981px) {
     .navDefault {

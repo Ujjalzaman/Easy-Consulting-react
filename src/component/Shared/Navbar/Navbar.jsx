@@ -9,6 +9,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import PopOver from '../PopOver/PopOver';
 import { UserContext } from '../../../App';
 
+
 const NavBar = () => {
     const { user } = useContext(UserContext)
     const [isSticky, setSticky] = useState(false)
@@ -52,9 +53,9 @@ const NavBar = () => {
                         <Nav.Item>
                             {
                                 user.email ?
-                                <div>
-                                    <PopOver />
-                                </div>:
+                                    <div>
+                                        <PopOver />
+                                    </div> :
                                     <Link to="/login">
                                         <button className="loginBtn">Login</button>
                                     </Link>
