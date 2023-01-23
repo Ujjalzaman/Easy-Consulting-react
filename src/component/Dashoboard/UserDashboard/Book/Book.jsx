@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
-import {UserContext} from '../../../../App'
+import React, { useEffect, useState } from 'react';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import { Form, Col, Row, Toast } from 'react-bootstrap';
@@ -7,9 +6,10 @@ import './Book.css'
 import axios from 'axios';
 import ifoIcon from '../../../../Assets/info.svg';
 import Checkout from './Checkout';
+import { SET_SELECTED_SERVICE, useAppContext } from '../../../../context';
 
 const Book = () => {
-    const { selectedService , setSelectedService } = useContext(UserContext)
+    const { state: { selectedService }, dispatch} = useAppContext()
     const [services, setServices] = useState([]);
     const [show, setShow] = useState(true);
 
@@ -18,14 +18,14 @@ const Book = () => {
         .then(res => {
             setServices(res.data)
             if(!selectedService.name){
-                setSelectedService(res.data[0])
+                dispatch({type: SET_SELECTED_SERVICE, payload: res.data[0]})
             }
         })
-    }, [selectedService.name, setSelectedService])
+    }, [selectedService.name, dispatch])
 
     const handleSelection = e => {
         const getService = services.find(({name}) => e.target.value === name)
-        setSelectedService(getService)
+        dispatch({type: SET_SELECTED_SERVICE, payload: getService})
     }
 
     const stripePromise = loadStripe('pk_test_51Ii2KaCKKXM4eFaOJWCOr8pS4GVkoCerGCRHefo7hDpLYMcjpGqPNpoeydvFApWXDSSMnfXNzdtwRcF1o8XmTk3H00xDH8wKZc');

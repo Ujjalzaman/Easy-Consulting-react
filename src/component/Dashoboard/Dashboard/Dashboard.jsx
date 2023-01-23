@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PopOver from '../../Shared/PopOver/PopOver';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
@@ -8,10 +8,10 @@ import UserDashboard from '../UserDashboard/UserDashboard/UserDashboard';
 import './Dashboard.css';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { UserContext } from '../../../App';
+import { SET_ADMIN, useAppContext } from '../../../context';
 
 const Dashboard = () => {
-    const { user, admin, setAdmin } = useContext(UserContext);
+    const { state: { user, admin }, dispatch } = useAppContext()
     const [sideToggle, setSideToggle] = useState(false)
     const [title, setTitle] = useState('Easy Consulting')
 
@@ -19,10 +19,10 @@ const Dashboard = () => {
         axios.get(`https://immense-river-40491.herokuapp.com/admin?email=${user.email}`)
         .then(res => {
             if(res.data.length > 0){
-                setAdmin(true)
+                dispatch({type: SET_ADMIN, payload: true})
             }
         })
-    },[user.email, admin, setAdmin])
+    },[dispatch, user.email])
 
     return (
         <div id="dashboard">

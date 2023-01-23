@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
     Navigate,
 } from "react-router-dom";
-import { UserContext } from '../../App';
+import { useAppContext } from '../../context';
 const PrivateRoute = ({ children,redirectTo  }) => {
-    const { user: { isSignedIn } } = useContext(UserContext)
+    const { state: { user: { isSignedIn } } } = useAppContext()
     return isSignedIn ? children : <Navigate to={redirectTo} />;
 }
 

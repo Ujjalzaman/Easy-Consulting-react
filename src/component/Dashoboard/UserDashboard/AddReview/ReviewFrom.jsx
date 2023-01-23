@@ -1,15 +1,15 @@
 import axios from 'axios';
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams,useNavigate  } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { UserContext } from '../../../../App';
 import swal from 'sweetalert';
+import { useAppContext } from '../../../../context';
 
 const ReviewForm = ({setIsUpdated}) => {
-    const {user: {email, img}} = useContext(UserContext)
+    const {state:{user: {email, img}}} = useAppContext()
     const {id} = useParams();
     const { register, handleSubmit, reset } = useForm();
     const [review, setReview] = useState({});

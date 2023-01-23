@@ -13,6 +13,7 @@ import { useContext } from 'react';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import { UserContext } from '../../../../App';
+import { useAppContext } from '../../../../context';
 
 
 const useOptions = () => {
@@ -36,7 +37,7 @@ const useOptions = () => {
 };
 
 const Checkout = () => {
-  const { user, selectedService: { name, img, _id, description, price } } = useContext(UserContext);
+  const { state: { user, selectedService: { name, img, _id, description, price } } } = useAppContext();
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
