@@ -9,9 +9,6 @@ import NotFound from "./component/NotFound";
 export const UserContext = createContext();
 
 const App = () => {
-  // const [admin, setAdmin] = useState(false);
-  // const [selectedService, setSelectedService] = useState({});
-  // const [user, setUser] = useState(getDecodedUser());
   return (
     <div>
       <Routes>
