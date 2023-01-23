@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,11 +7,11 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import PopOver from '../PopOver/PopOver';
-import { UserContext } from '../../../App';
+import { useAppContext } from '../../../context';
 
 
 const NavBar = () => {
-    const { user } = useContext(UserContext)
+    const { state: { user } } = useAppContext()
     const [isSticky, setSticky] = useState(false)
 
     useEffect(() => {

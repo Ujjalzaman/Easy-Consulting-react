@@ -1,13 +1,17 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Service.css'
 import Fade from 'react-reveal/Fade';
 import './Service.css';
-import { UserContext } from '../../../App';
+import { useAppContext } from '../../../context';
 
 const Service = ({service}) => {
-    const { admin, setSelectedService } = useContext(UserContext)
+    const { state:{ admin}, dispatch } = useAppContext()
     const {name, price, description, img} = service;
+
+    const handleSelectedService = (service) => {
+        dispatch({type: 'SELECTED_SERVICE', payload: service})
+    }    
     
     return (
         <div className="col-md-6 col-lg-4 service">
@@ -22,7 +26,7 @@ const Service = ({service}) => {
                         <p className="servicePrice">${price}</p>
                         <Link className="serviceLink" to={admin ? '/dashboard/orderList' : '/dashboard/book'}>
                             <button className="bookingBtn" 
-                            onClick={() => setSelectedService(service)}
+                            onClick={handleSelectedService}
                             >Book Now</button>
                         </Link>
                     </div>
