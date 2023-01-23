@@ -9,21 +9,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
-import { UserContext } from '../../App';
 import toast from 'react-hot-toast';
 import swal from 'sweetalert';
 import { handleSignOut } from './LoginManager';
+import { SET_USER, useAppContext } from '../../context';
 
 const Form = () => {
+  const { dispatch } = useAppContext()
   const [isSignUp, setSignUp] = useState(false);
-  const { setUser } = useContext(UserContext);
 
   const history = useNavigate();
   const location = useLocation();
   let { from } = location.state || { from: { pathname: "/" }};
 
   const handleResponse = (res) => {
-    setUser(res);
+    dispatch({type: SET_USER, payload: res})
     if(!res.error){
       toast.success('Successfully Logged In!');
       history(from);
@@ -39,7 +39,7 @@ const Form = () => {
           if (!ok) {
               handleSignOut()
                 .then(res => {
-                    setUser(res)
+                    dispatch({type: SET_USER, payload: res})
                     toast.error('Logged Out!');
                 })
           }

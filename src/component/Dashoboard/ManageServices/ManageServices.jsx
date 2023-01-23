@@ -3,16 +3,15 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useContext } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import swal from 'sweetalert';
-import { UserContext } from '../../../App';
+import { useAppContext } from '../../../context';
 import TableLoader from '../../Shared/TableOrder/TableOrder';
 import AddService from '../AddService/AddService';
 
 const ManageServices = () => {
-    const {user : { email }} = useContext(UserContext)
+    const { state: { email }} = useAppContext()
     const [services, setServices] = useState([])
     const [isUpdated, setIsUpdated] = useState(false)
     const [edit, setEdit] = useState(null);
