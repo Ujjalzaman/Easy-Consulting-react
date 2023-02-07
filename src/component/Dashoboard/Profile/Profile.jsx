@@ -1,18 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Col } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import './Profile.css'
 import userimg from '../../../Assets/user.svg';
 import { handleSignOut } from '../../Login/LoginManager';
-import { UserContext } from '../../../App';
+import { SET_USER, useAppContext } from '../../../context';
 const Profile = () => {
-    const {user: {name, email, img}, setUser} = useContext(UserContext);
+    const { state:{user: { name, email, img }}, dispatch} = useAppContext()
     const signOut = () => {
         const loading = toast.loading('Please wait...');
         handleSignOut()
         .then(res => {
             toast.dismiss(loading);
-            setUser(res)
+            dispatch({type: SET_USER, payload: res})
             toast.error('Logged Out!');
         })
     }

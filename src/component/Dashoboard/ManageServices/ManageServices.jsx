@@ -3,27 +3,15 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useContext } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import swal from 'sweetalert';
-import { UserContext } from '../../../App';
+import { useAppContext } from '../../../context';
 import TableLoader from '../../Shared/TableOrder/TableOrder';
 import AddService from '../AddService/AddService';
 
 const ManageServices = () => {
-    const { user: { email } } = useContext(UserContext)
-    const [services, setServices] = useState([])
-    const [isUpdated, setIsUpdated] = useState(false)
-    const [edit, setEdit] = useState(null);
-
-    useEffect(() => {
-        axios.get('https://immense-river-40491.herokuapp.com/services')
-            .then(res => {
-                setServices(res.data);
-                setIsUpdated(false)
-            })
-    }, [isUpdated, edit])
+    const { state: { email }} = useAppContext()
 
     const checkPermission = (id, action) => {
         const getMainServices = services.slice(0, 6)

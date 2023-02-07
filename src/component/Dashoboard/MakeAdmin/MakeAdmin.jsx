@@ -1,13 +1,13 @@
 import axios from 'axios';
-import React, { useContext } from 'react';
+import React from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import swal from 'sweetalert';
-import { UserContext } from '../../../App';
+import { useAppContext } from '../../../context';
 
 const MakeAdmin = () => {
-    const { user: {email} } = useContext(UserContext)
+    const { state:{ user: {email}}} = useAppContext()
     const { register, handleSubmit, formState: { errors }, reset} = useForm();
 
     const onSubmit = data => {
