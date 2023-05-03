@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  web: 
+    container_name: Easy-Consulting-react
+    build: .
+    ports: 
+      - 3000:80

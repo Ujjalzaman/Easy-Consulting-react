@@ -66,6 +66,26 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    yarn start
    ```
+4. Start the docker
+    ```sh
+   docker build -t Easy-Consulting-react.
+   ```
+   ```sh
+   docker image
+   ```
+   ```sh
+   docker run -d --name Easy-Consulting-react  -p 3000:80 Easy-Consulting-react
+   ```
+   ```sh
+   docker ps
+   ```
+   or
+   ```sh
+   docker-compose up # to start service
+   docker-compose down # to stop service
+   ```
+   Note: Service will be start at http://localhost:3000/
+   
  <p align="left">For this project you have to create firebase console for authentication , mongodb for database and stripe for payment gateway.</p>
  <p>After then put all the credential env file respectly for backend keep them in root folder</p>
  <p>create a jsx file in root and add here firbase config info</p>

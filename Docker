@@ -1,0 +1,17 @@
+# Node Block
+
+FROM  node:alpine3.16 as node
+WORKDIR /Easy-Consulting-react
+COPY package.json .
+RUN npm install --legacy-peer-deps
+COPY . .
+RUN npm run build
+
+
+# Nginx Block
+
+FROM nginx:1.23-alpine
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=node /Easy-Consulting-react/build .
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
