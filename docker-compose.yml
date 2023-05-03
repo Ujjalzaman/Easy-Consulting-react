@@ -4,4 +4,4 @@ services:
     container_name: Easy-Consulting-react
     build: .
     ports: 
-      - 5000:80
+      - 3000:80
