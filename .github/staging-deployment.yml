@@ -1,0 +1,16 @@
+name: Push-to-EC2-staging
+
+# Trigger deployment only on push to master branch
+on:
+  push:
+    tags:
+      - 'release-ec2'
+
+jobs:
+  deploy:
+    name: Deploy to EC2 when particular tag Add
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the files
+        uses: actions/checkout@v2
